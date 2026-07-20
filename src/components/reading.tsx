@@ -13,30 +13,11 @@ const tabs = [
   { key: 'films', label: '电影' },
 ];
 
-const defaultBooks = [
-  { title: '设计的生态学', author: '后藤武', rating: 4.5, key: 'book-0' },
-  { title: 'Wabi-Sabi: 给设计师的侘寂之美', author: 'Leonard Koren', rating: 4.0, key: 'book-1' },
-  { title: 'The Nature of Order', author: 'Christopher Alexander', rating: 5.0, key: 'book-2' },
-  { title: '透明性', author: '柯林·罗 / 罗伯特·斯拉茨基', rating: 4.5, key: 'book-3' },
-  { title: '论摄影', author: '苏珊·桑塔格', rating: 4.5, key: 'book-4' },
-];
+const defaultBooks: Array<{ title: string; author: string; rating: number; key: string }> = [];
 
-const defaultFilms = [
-  { title: '帕特森', author: '吉姆·贾木许', rating: 4.5, key: 'film-0' },
-  { title: '春夏秋冬又一春', author: '金基德', rating: 4.0, key: 'film-1' },
-  { title: '穆赫兰道', author: '大卫·林奇', rating: 3.5, key: 'film-2' },
-];
+const defaultFilms: Array<{ title: string; author: string; rating: number; key: string }> = [];
 
-const defaultReviews: Record<string, string> = {
-  'book-0': '从环境与感知的角度重新理解设计，影响了我对空间与物的看法。',
-  'book-1': '简洁而深刻的一本小书，关于不完美的美学。',
-  'book-2': '关于秩序的鸿篇巨制，每次重读都有新的收获。',
-  'book-3': '建筑与艺术中的透明性概念——现象透明与字面透明。',
-  'book-4': '摄影伦理与美学的经典文本，常读常新。',
-  'film-0': '日常的诗意——一部关于司机与诗人的电影，安静而有力。',
-  'film-1': '四季轮回中的修行与欲望，画面极美。',
-  'film-2': '超现实的梦境叙事，视觉符号丰富。',
-};
+const defaultReviews: Record<string, string> = {};
 
 function genBookId() {
   return 'book-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);

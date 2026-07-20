@@ -26,13 +26,13 @@ export default function About() {
 
             <EditableText
               storageKey="about-p1"
-              fallback="常驻台北，在艺术、设计与摄影之间穿行。我相信好的作品来自精确而非丰富——知道该舍弃什么，该在哪里放置一条线，以及何时让空无发声。"
+              fallback="16 岁｜ENTP｜base 上海&四川。目前在研究 podcast 和 vibe coding。"
               className="reveal text-sm text-gray-soft font-light leading-relaxed"
             />
 
             <EditableText
               storageKey="about-p2"
-              fallback="多年来，我曾在台北、东京和柏林展出，与亚洲及欧洲的设计工作室合作，并在建筑期刊上发表摄影作品。我的实践根植于减法、结构与光的行为。"
+              fallback="目前在寻地 Wemapterra 担任视频部主管&制片，同时筹备两档播客节目，偶尔做点 vibe coding 的开发。"
               className="reveal text-sm text-gray-soft font-light leading-relaxed"
               tag="p"
             />
@@ -45,7 +45,7 @@ export default function About() {
                 className="text-xs tracking-wider uppercase text-foreground/60 mb-3"
               />
               <div className="flex flex-wrap gap-2">
-                {['建筑漫游', '黑胶收藏', '手冲咖啡', '独立出版', '城市徒步'].map((h) => (
+                {['摄影', '钢琴', '无人机', '写作', '播客', 'Vibecoding'].map((h) => (
                   <span key={h} className="px-3 py-1.5 rounded-full text-xs border border-border text-gray-soft font-light">
                     {h}
                   </span>
@@ -65,7 +65,7 @@ export default function About() {
             <div className="reveal pt-4 border-t border-border" style={{ transitionDelay: '0.45s' }}>
               <EditableText
                 storageKey="about-bio"
-                fallback="生于台湾，现居台北。跨媒介创作者，工作在艺术、设计与摄影的交汇处。"
+                fallback="ENTP / INTJ｜创新 · 热情 · 理性｜想拓展人脉，了解风口，向大佬学习。"
                 className="text-xs text-gray-soft/60 font-light leading-relaxed"
                 tag="p"
               />

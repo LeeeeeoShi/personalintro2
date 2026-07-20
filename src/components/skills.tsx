@@ -6,39 +6,39 @@ import EditableText from '@/components/editable-text';
 
 const skillGroups = [
   {
-    name: '设计', key: 'skills-g0',
+    name: '摄影与影视', key: 'skills-g0',
     skills: [
-      { name: '品牌识别', key: 'sg0-0' },
-      { name: '编辑排版', key: 'sg0-1' },
-      { name: '海报设计', key: 'sg0-2' },
-      { name: 'UI/UX', key: 'sg0-3' },
+      { name: '摄影及后期', key: 'sg0-0' },
+      { name: '胶片摄影', key: 'sg0-1' },
+      { name: '影视制作与编导', key: 'sg0-2' },
+      { name: 'AI 视频制作', key: 'sg0-3' },
     ],
   },
   {
-    name: '艺术', key: 'skills-g1',
+    name: '技术与开发', key: 'skills-g1',
     skills: [
-      { name: '丙烯绘画', key: 'sg1-0' },
-      { name: '综合材料', key: 'sg1-1' },
-      { name: '水墨', key: 'sg1-2' },
-      { name: '数码版画', key: 'sg1-3' },
+      { name: 'Python / 前端', key: 'sg1-0' },
+      { name: 'Vibecoding', key: 'sg1-1' },
+      { name: 'AI 训练与 Prompt', key: 'sg1-2' },
+      { name: 'PCB 设计 / 嵌入式', key: 'sg1-3' },
     ],
   },
   {
-    name: '摄影', key: 'skills-g2',
+    name: '无人机', key: 'skills-g2',
     skills: [
-      { name: '静物摄影', key: 'sg2-0' },
-      { name: '建筑摄影', key: 'sg2-1' },
-      { name: '后期处理', key: 'sg2-2' },
-      { name: '胶片摄影', key: 'sg2-3' },
+      { name: '无人机定制组装', key: 'sg2-0' },
+      { name: '穿越机（FPV）', key: 'sg2-1' },
+      { name: '课程培训', key: 'sg2-2' },
+      { name: '出口贸易与电商', key: 'sg2-3' },
     ],
   },
   {
-    name: '工具', key: 'skills-g3',
+    name: '创意与其他', key: 'skills-g3',
     skills: [
-      { name: 'Figma / Sketch', key: 'sg3-0' },
-      { name: 'Adobe Suite', key: 'sg3-1' },
-      { name: 'Capture One', key: 'sg3-2' },
-      { name: 'Blender', key: 'sg3-3' },
+      { name: '3D 建模', key: 'sg3-0' },
+      { name: '写作与内容运营', key: 'sg3-1' },
+      { name: '播音与主持', key: 'sg3-2' },
+      { name: '播客制作与运营', key: 'sg3-3' },
     ],
   },
 ];

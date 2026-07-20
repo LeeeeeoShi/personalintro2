@@ -1,20 +1,18 @@
 'use client';
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback } from 'react';
 
 export function useLocalStorage<T>(key: string, fallback: T) {
-  const [value, setValue] = useState<T>(fallback);
-  const loaded = useRef(false);
+  const localKey = `local:${key}`;
 
-  useEffect(() => {
-    if (loaded.current) return;
-    loaded.current = true;
-    fetch(`/api/content?key=${encodeURIComponent(key)}`)
-      .then((r) => r.json())
-      .then((data) => {
-        if (data !== null) setValue(data);
-      })
-      .catch(() => {});
-  }, [key]);
+  const [value, setValue] = useState<T>(() => {
+    if (typeof window === 'undefined') return fallback;
+    try {
+      const raw = localStorage.getItem(localKey);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch {
+      return fallback;
+    }
+  });
 
   const set = useCallback(
     (next: T | ((prev: T) => T)) => {
@@ -23,15 +21,13 @@ export function useLocalStorage<T>(key: string, fallback: T) {
           typeof next === 'function'
             ? (next as (prev: T) => T)(prev)
             : next;
-        fetch('/api/content', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ key, data: resolved }),
-        }).catch(() => {});
+        try {
+          localStorage.setItem(localKey, JSON.stringify(resolved));
+        } catch {}
         return resolved;
       });
     },
-    [key],
+    [localKey],
   );
 
   return [value, set] as const;

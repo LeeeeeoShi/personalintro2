@@ -8,14 +8,9 @@ import { useLocalStorage } from '@/hooks/useLocalStorage';
 import SectionHeading from '@/components/section-heading';
 import EditableText from '@/components/editable-text';
 
-const defaultProjects = [
-  { id: 'p1', title: '几何抽象系列', desc: '以几何简化为手段探索空间构成关系的系列绘画。', tags: ['丙烯', '画布'], gradient: 'from-[#f0ede8] to-[#e5e0d8] dark:from-[#222] dark:to-[#1a1a1c]', cat: 'art' },
-  { id: 'p2', title: 'NORD 品牌识别', desc: '为概念建筑事务所打造的精致视觉系统，涵盖标志、色彩与应用规范。', tags: ['品牌', '视觉系统'], gradient: 'from-[#e8e4dc] to-[#ddd7cc] dark:from-[#222] dark:to-[#1a1a1c]', cat: 'design' },
-  { id: 'p3', title: '光的研究', desc: '透过透明层叠与阴影探讨自然光在物体表面的行为。', tags: ['综合材料', '摄影'], gradient: 'from-[#e8e6e2] to-[#ddd9d0] dark:from-[#1e1e20] dark:to-[#18181a]', cat: 'art' },
-  { id: 'p4', title: '博物馆导视系统', desc: '为当代美术馆设计的简洁明了的环境标识系统。', tags: ['环境设计', '导视'], gradient: 'from-[#ece8e0] to-[#e0d8cc] dark:from-[#202022] dark:to-[#18181a]', cat: 'design' },
-  { id: 'p5', title: '静物 — 容器', desc: '日常器皿被还原为本质的几何形态，以光线勾勒质感。', tags: ['静物', '摄影'], gradient: 'from-[#f0ece4] to-[#e5dfd4] dark:from-[#222224] dark:to-[#1c1c1e]', cat: 'photo' },
-  { id: 'p6', title: '海报系列 — 空间中的形式', desc: '文字与几何在网格系统中的三部曲编排实验。', tags: ['海报', '编辑设计'], gradient: 'from-[#f2eee8] to-[#e8e2d8] dark:from-[#242426] dark:to-[#1c1c1e]', cat: 'design' },
-];
+const defaultProjects: Array<{
+  id: string; title: string; desc: string; tags: string[]; gradient: string; cat: string;
+}> = [];
 
 const tabs = [
   { key: 'all', label: '全部' },
